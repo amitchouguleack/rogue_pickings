@@ -1,0 +1,297 @@
+/******** GLOBAL STYLES ********/
+body {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 30px; /* Base size, will adjust with media queries */
+}
+
+h2 {
+    font-size: 24px; /* Base size, will adjust with media queries */
+}
+
+h3 {
+    font-size: 20px; /* Base size, will adjust with media queries */
+}
+
+h4 {
+    font-size: 12px;
+}
+
+p {
+    line-height: 1.5; /* Use relative units for line-height */
+}
+
+.content-wrapper {
+    max-width: 1200px; /* Changed from width to max-width */
+    width: 90%; /* Added a percentage width for responsiveness */
+    margin: 0 auto;
+    /* overflow: auto; - Removed, Flexbox/Grid handles layout better */
+}
+
+/******** HEADER STYLES ********/
+header .content-wrapper {
+    display: flex; /* Use Flexbox for header layout */
+    flex-direction: column; /* Stack items vertically by default (mobile first) */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within items */
+    padding: 20px 0; /* Add some padding */
+}
+
+header h1 {
+    width: auto; /* Remove fixed width */
+    float: none; /* Remove float */
+    margin: 0;
+    padding: 0; /* Adjust padding as needed */
+    font-size: 2em; /* Use em for scaling with parent font size */
+}
+
+header h1 span {
+    color: #45610E;
+}
+
+header nav {
+    width: auto; /* Remove fixed width */
+    float: none; /* Remove float */
+    padding: 0; /* Adjust padding */
+    margin-top: 15px; /* Add some space between h1 and nav */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center nav links */
+    list-style: none; /* Remove list bullet points */
+}
+
+header nav ul li {
+    display: block; /* Stack nav items vertically on mobile */
+    font-size: 1em; /* Use em for scaling */
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 0; /* Adjust padding for stacked items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #45610E;
+}
+
+/******** MAIN STYLES ********/
+/******** TOP SECTION ********/
+.top-section .content-wrapper {
+    display: flex; /* Use Flexbox for top section layout */
+    flex-direction: column; /* Stack items vertically by default (mobile first) */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.main-image {
+    width: 100%; /* Make image container full width */
+    margin-bottom: 20px; /* Space below image */
+}
+
+.main-image img {
+    border-top: 3px solid #77A466;
+    border-bottom: 3px solid #77A466;
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+}
+
+.main-title {
+    text-align: center; /* Center text for mobile */
+}
+
+.main-title h2 {
+    color: #45610E;
+    padding: 10px 0;
+    font-size: 1.8em; /* Responsive font size */
+}
+
+.main-title p {
+    font-size: 1em; /* Responsive font size */
+}
+
+/******** BOTTOM SECTION ********/
+.bottom-section .content-wrapper {
+    border-top: 5px solid #EEE;
+    border-bottom: 5px solid #EEE;
+    padding: 20px 0; /* Add padding for spacing */
+    display: flex; /* Use Flexbox for bottom sections */
+    flex-direction: column; /* Stack items vertically by default (mobile first) */
+    gap: 20px; /* Space between sections */
+}
+
+.section-one,
+.section-two,
+.section-three {
+    box-sizing: border-box;
+    width: 100%; /* Make each section full width on mobile */
+    padding: 0 20px; /* Adjust padding */
+    text-align: center; /* Center text for mobile */
+    border: none; /* Remove borders by default */
+}
+
+.section-two {
+    border-top: 5px solid #EEE; /* Add border for separation on stacked layout */
+    border-bottom: 5px solid #EEE; /* Add border for separation on stacked layout */
+}
+
+.bottom-section h3 {
+    margin: 15px 0; /* Adjust margin for smaller screens */
+    font-size: 1.3em; /* Responsive font size */
+}
+
+.menu-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.menu-list li {
+    color: #45610E;
+    line-height: 1.8; /* Adjust line height */
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/******** FOOTER STYLES ********/
+footer {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin */
+    padding-bottom: 20px; /* Add padding to bottom */
+}
+
+footer h4 {
+    font-size: 0.8em; /* Responsive font size */
+}
+
+footer span {
+    font-family: 'Galada', cursive;
+    text-transform: lowercase;
+    color: #45610E;
+    font-size: 1em; /* Responsive font size */
+}
+
+
+/******** MEDIA QUERIES ********/
+
+/* Tablet styles (e.g., 768px and up) */
+@media (min-width: 768px) {
+    header .content-wrapper {
+        flex-direction: row; /* Layout side-by-side */
+        justify-content: space-between; /* Space out items */
+        align-items: flex-end; /* Align to bottom */
+        padding: 36px 0; /* Restore original padding */
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Larger font size for tablet */
+    }
+
+    header nav {
+        margin-top: 0; /* Remove top margin */
+    }
+
+    header nav ul li {
+        display: inline-block; /* Display inline for horizontal nav */
+        padding: 0 10px; /* Restore original padding */
+    }
+
+    .top-section .content-wrapper {
+        flex-direction: row; /* Layout side-by-side */
+        justify-content: space-between; /* Space out items */
+        align-items: center; /* Align items vertically */
+        text-align: left; /* Align text left for desktop/tablet */
+        padding: 40px 0; /* Adjust padding */
+    }
+
+    .main-image {
+        width: 48%; /* Adjust width for two-column layout */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .main-title {
+        width: 48%; /* Adjust width for two-column layout */
+        text-align: left; /* Align text left */
+    }
+
+    .main-title h2 {
+        font-size: 2em; /* Larger font size for tablet */
+        padding-top: 0; /* Remove top padding */
+    }
+
+    .bottom-section .content-wrapper {
+        flex-direction: row; /* Layout side-by-side */
+        justify-content: space-between; /* Space out columns */
+        align-items: flex-start; /* Align items to the top */
+        padding: 40px 0; /* Adjust padding */
+    }
+
+    .section-one,
+    .section-two,
+    .section-three {
+        width: 32%; /* Approximate one-third width for three columns */
+        padding: 0 15px; /* Adjust padding */
+        text-align: left; /* Align text left for desktop/tablet */
+    }
+
+    .section-two {
+        border-left: 5px solid #EEE; /* Restore left border */
+        border-right: 5px solid #EEE; /* Restore right border */
+        border-top: none; /* Remove top border */
+        border-bottom: none; /* Remove bottom border */
+    }
+
+    .bottom-section h3 {
+        margin: 30px 0; /* Restore original margin */
+    }
+}
+
+/* Desktop styles (e.g., 1024px and up) */
+@media (min-width: 1024px) {
+    header h1 {
+        font-size: 30px; /* Restore original H1 size */
+    }
+
+    header nav {
+        padding: 44px 0; /* Restore original nav padding */
+    }
+
+    header nav ul li {
+        font-size: 14px; /* Restore original nav font size */
+    }
+
+    .main-title h2 {
+        font-size: 24px; /* Restore original H2 size */
+    }
+
+    .bottom-section .content-wrapper {
+        gap: 0; /* Remove gap if individual section padding is preferred */
+    }
+
+    .section-one {
+        width: 350px; /* Restore original width */
+        padding: 0 40px; /* Restore original padding */
+    }
+
+    .section-two {
+        width: 500px; /* Restore original width */
+        padding: 0 40px; /* Restore original padding */
+    }
+
+    .section-three {
+        width: 350px; /* Restore original width */
+        padding: 0 40px; /* Restore original padding */
+    }
+}
