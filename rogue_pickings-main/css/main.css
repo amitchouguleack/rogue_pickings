@@ -37,7 +37,6 @@ p {
     max-width: 1200px; /* Changed from width to max-width */
     width: 90%; /* Added a percentage width for responsiveness */
     margin: 0 auto;
-    /* overflow: auto; - Removed, Flexbox/Grid handles layout better */
 }
 
 /******** HEADER STYLES ********/
@@ -50,11 +49,11 @@ header .content-wrapper {
 }
 
 header h1 {
-    width: auto; /* Remove fixed width */
-    float: none; /* Remove float */
+    /* Removed fixed width and float, Flexbox handles distribution */
     margin: 0;
-    padding: 0; /* Adjust padding as needed */
+    padding: 0;
     font-size: 2em; /* Use em for scaling with parent font size */
+    line-height: 1; /* Ensure line height doesn't add extra space */
 }
 
 header h1 span {
@@ -62,9 +61,8 @@ header h1 span {
 }
 
 header nav {
-    width: auto; /* Remove fixed width */
-    float: none; /* Remove float */
-    padding: 0; /* Adjust padding */
+    /* Removed fixed width and float, Flexbox handles distribution */
+    padding: 0;
     margin-top: 15px; /* Add some space between h1 and nav */
 }
 
@@ -192,20 +190,22 @@ footer span {
         flex-direction: row; /* Layout side-by-side */
         justify-content: space-between; /* Space out items */
         align-items: flex-end; /* Align to bottom */
-        padding: 36px 0; /* Restore original padding */
+        padding: 36px 20px; /* ADDED HORIZONTAL PADDING HERE FOR TABLET */
     }
 
     header h1 {
-        font-size: 2.5em; /* Larger font size for tablet */
+        font-size: 2.2em; /* Slightly adjusted font size for tablet for better fit */
+        flex-shrink: 0; /* Prevents h1 from shrinking, ensuring full visibility */
     }
 
     header nav {
         margin-top: 0; /* Remove top margin */
+        flex-shrink: 0; /* Prevents nav from shrinking */
     }
 
     header nav ul li {
         display: inline-block; /* Display inline for horizontal nav */
-        padding: 0 10px; /* Restore original padding */
+        padding: 0 8px; /* Slightly reduced padding between nav items for more space on tablet */
     }
 
     .top-section .content-wrapper {
@@ -260,6 +260,9 @@ footer span {
 
 /* Desktop styles (e.g., 1024px and up) */
 @media (min-width: 1024px) {
+    header .content-wrapper {
+        padding: 36px 0; /* Revert to no horizontal padding on larger desktops if content-wrapper has fixed width */
+    }
     header h1 {
         font-size: 30px; /* Restore original H1 size */
     }
@@ -270,6 +273,7 @@ footer span {
 
     header nav ul li {
         font-size: 14px; /* Restore original nav font size */
+        padding: 0 10px; /* Restore original nav item padding */
     }
 
     .main-title h2 {
