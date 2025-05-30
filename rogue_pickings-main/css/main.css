@@ -14,15 +14,15 @@ h4 {
 }
 
 h1 {
-    font-size: 30px; /* Base size, will adjust with media queries */
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 24px; /* Base size, will adjust with media queries */
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 20px; /* Base size, will adjust with media queries */
+    font-size: 20px;
 }
 
 h4 {
@@ -30,30 +30,30 @@ h4 {
 }
 
 p {
-    line-height: 1.5; /* Use relative units for line-height */
+    line-height: 1.5;
 }
 
 .content-wrapper {
-    max-width: 1200px; /* Changed from width to max-width */
-    width: 90%; /* Added a percentage width for responsiveness */
+    max-width: 1200px;
+    width: 90%; /* Ensures it's always 90% of viewport width up to max-width */
     margin: 0 auto;
 }
 
 /******** HEADER STYLES ********/
 header .content-wrapper {
-    display: flex; /* Use Flexbox for header layout */
+    display: flex;
     flex-direction: column; /* Stack items vertically by default (mobile first) */
     align-items: center; /* Center items horizontally */
     text-align: center; /* Center text within items */
-    padding: 20px 0; /* Add some padding */
+    padding: 20px; /* Added universal padding for mobile */
 }
 
 header h1 {
-    /* Removed fixed width and float, Flexbox handles distribution */
     margin: 0;
     padding: 0;
-    font-size: 2em; /* Use em for scaling with parent font size */
-    line-height: 1; /* Ensure line height doesn't add extra space */
+    font-size: 2em;
+    line-height: 1;
+    /* On mobile, h1 naturally takes full width with flex-direction: column */
 }
 
 header h1 span {
@@ -61,21 +61,21 @@ header h1 span {
 }
 
 header nav {
-    /* Removed fixed width and float, Flexbox handles distribution */
     padding: 0;
-    margin-top: 15px; /* Add some space between h1 and nav */
+    margin-top: 15px; /* Space between h1 and nav on mobile */
+    /* On mobile, nav naturally takes full width with flex-direction: column */
 }
 
 header nav ul {
     margin: 0;
     padding: 0;
-    text-align: center; /* Center nav links */
-    list-style: none; /* Remove list bullet points */
+    text-align: center;
+    list-style: none;
 }
 
 header nav ul li {
     display: block; /* Stack nav items vertically on mobile */
-    font-size: 1em; /* Use em for scaling */
+    font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
     padding: 8px 0; /* Adjust padding for stacked items */
@@ -89,45 +89,45 @@ header nav ul li a {
 /******** MAIN STYLES ********/
 /******** TOP SECTION ********/
 .top-section .content-wrapper {
-    display: flex; /* Use Flexbox for top section layout */
+    display: flex;
     flex-direction: column; /* Stack items vertically by default (mobile first) */
     align-items: center;
-    padding: 20px 0;
+    padding: 20px; /* Added universal padding for mobile */
 }
 
 .main-image {
-    width: 100%; /* Make image container full width */
-    margin-bottom: 20px; /* Space below image */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .main-image img {
     border-top: 3px solid #77A466;
     border-bottom: 3px solid #77A466;
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .main-title {
-    text-align: center; /* Center text for mobile */
+    text-align: center;
 }
 
 .main-title h2 {
     color: #45610E;
     padding: 10px 0;
-    font-size: 1.8em; /* Responsive font size */
+    font-size: 1.8em;
 }
 
 .main-title p {
-    font-size: 1em; /* Responsive font size */
+    font-size: 1em;
 }
 
 /******** BOTTOM SECTION ********/
 .bottom-section .content-wrapper {
     border-top: 5px solid #EEE;
     border-bottom: 5px solid #EEE;
-    padding: 20px 0; /* Add padding for spacing */
-    display: flex; /* Use Flexbox for bottom sections */
+    padding: 20px; /* Added universal padding for mobile */
+    display: flex;
     flex-direction: column; /* Stack items vertically by default (mobile first) */
     gap: 20px; /* Space between sections */
 }
@@ -136,20 +136,20 @@ header nav ul li a {
 .section-two,
 .section-three {
     box-sizing: border-box;
-    width: 100%; /* Make each section full width on mobile */
-    padding: 0 20px; /* Adjust padding */
-    text-align: center; /* Center text for mobile */
-    border: none; /* Remove borders by default */
+    width: 100%; /* Each section full width on mobile */
+    padding: 0; /* Reset internal padding, content-wrapper handles it */
+    text-align: center;
+    border: none;
 }
 
 .section-two {
-    border-top: 5px solid #EEE; /* Add border for separation on stacked layout */
-    border-bottom: 5px solid #EEE; /* Add border for separation on stacked layout */
+    border-top: 5px solid #EEE; /* Border for separation on stacked layout */
+    border-bottom: 5px solid #EEE; /* Border for separation on stacked layout */
 }
 
 .bottom-section h3 {
-    margin: 15px 0; /* Adjust margin for smaller screens */
-    font-size: 1.3em; /* Responsive font size */
+    margin: 15px 0;
+    font-size: 1.3em;
 }
 
 .menu-list {
@@ -159,26 +159,26 @@ header nav ul li a {
 
 .menu-list li {
     color: #45610E;
-    line-height: 1.8; /* Adjust line height */
-    margin-bottom: 5px; /* Space between list items */
+    line-height: 1.8;
+    margin-bottom: 5px;
 }
 
 /******** FOOTER STYLES ********/
 footer {
     text-align: center;
-    margin-top: 20px; /* Adjust margin */
-    padding-bottom: 20px; /* Add padding to bottom */
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 footer h4 {
-    font-size: 0.8em; /* Responsive font size */
+    font-size: 0.8em;
 }
 
 footer span {
     font-family: 'Galada', cursive;
     text-transform: lowercase;
     color: #45610E;
-    font-size: 1em; /* Responsive font size */
+    font-size: 1em;
 }
 
 
@@ -190,112 +190,120 @@ footer span {
         flex-direction: row; /* Layout side-by-side */
         justify-content: space-between; /* Space out items */
         align-items: flex-end; /* Align to bottom */
-        padding: 36px 20px; /* ADDED HORIZONTAL PADDING HERE FOR TABLET */
+        padding: 36px 40px; /* SIGNIFICANTLY INCREASED HORIZONTAL PADDING FOR TABLET */
     }
 
     header h1 {
-        font-size: 2.2em; /* Slightly adjusted font size for tablet for better fit */
-        flex-shrink: 0; /* Prevents h1 from shrinking, ensuring full visibility */
+        font-size: 2.2em; /* Adjusted font size for tablet for better fit */
+        flex-grow: 1; /* Allow h1 to grow */
+        flex-shrink: 1; /* Allow h1 to shrink */
+        flex-basis: auto; /* Let content determine initial size */
+        text-align: left; /* Align h1 to the left */
+        margin-right: 20px; /* Add some space between h1 and nav */
     }
 
     header nav {
-        margin-top: 0; /* Remove top margin */
-        flex-shrink: 0; /* Prevents nav from shrinking */
+        margin-top: 0;
+        flex-grow: 1; /* Allow nav to grow */
+        flex-shrink: 1; /* Allow nav to shrink */
+        flex-basis: auto; /* Let content determine initial size */
+        text-align: right; /* Align nav to the right */
     }
 
     header nav ul li {
-        display: inline-block; /* Display inline for horizontal nav */
+        display: inline-block;
         padding: 0 8px; /* Slightly reduced padding between nav items for more space on tablet */
     }
 
     .top-section .content-wrapper {
-        flex-direction: row; /* Layout side-by-side */
-        justify-content: space-between; /* Space out items */
-        align-items: center; /* Align items vertically */
-        text-align: left; /* Align text left for desktop/tablet */
-        padding: 40px 0; /* Adjust padding */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 40px 0; /* Resetting padding as .content-wrapper has its own */
     }
 
     .main-image {
-        width: 48%; /* Adjust width for two-column layout */
-        margin-bottom: 0; /* Remove bottom margin */
+        width: 48%;
+        margin-bottom: 0;
     }
 
     .main-title {
-        width: 48%; /* Adjust width for two-column layout */
-        text-align: left; /* Align text left */
+        width: 48%;
+        text-align: left;
     }
 
     .main-title h2 {
-        font-size: 2em; /* Larger font size for tablet */
-        padding-top: 0; /* Remove top padding */
+        font-size: 2em;
+        padding-top: 0;
     }
 
     .bottom-section .content-wrapper {
-        flex-direction: row; /* Layout side-by-side */
-        justify-content: space-between; /* Space out columns */
-        align-items: flex-start; /* Align items to the top */
-        padding: 40px 0; /* Adjust padding */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px 0; /* Resetting padding as .content-wrapper has its own */
     }
 
     .section-one,
     .section-two,
     .section-three {
         width: 32%; /* Approximate one-third width for three columns */
-        padding: 0 15px; /* Adjust padding */
-        text-align: left; /* Align text left for desktop/tablet */
+        padding: 0 15px; /* Adjust padding *inside* each section */
+        text-align: left;
     }
 
     .section-two {
-        border-left: 5px solid #EEE; /* Restore left border */
-        border-right: 5px solid #EEE; /* Restore right border */
-        border-top: none; /* Remove top border */
-        border-bottom: none; /* Remove bottom border */
+        border-left: 5px solid #EEE;
+        border-right: 5px solid #EEE;
+        border-top: none;
+        border-bottom: none;
     }
 
     .bottom-section h3 {
-        margin: 30px 0; /* Restore original margin */
+        margin: 30px 0;
     }
 }
 
 /* Desktop styles (e.g., 1024px and up) */
 @media (min-width: 1024px) {
     header .content-wrapper {
-        padding: 36px 0; /* Revert to no horizontal padding on larger desktops if content-wrapper has fixed width */
+        padding: 36px 0; /* Revert to no horizontal padding on larger desktops as max-width handles it */
     }
     header h1 {
         font-size: 30px; /* Restore original H1 size */
+        margin-right: 0; /* Remove specific margin for larger screens */
     }
 
     header nav {
-        padding: 44px 0; /* Restore original nav padding */
+        padding: 44px 0;
     }
 
     header nav ul li {
-        font-size: 14px; /* Restore original nav font size */
+        font-size: 14px;
         padding: 0 10px; /* Restore original nav item padding */
     }
 
     .main-title h2 {
-        font-size: 24px; /* Restore original H2 size */
+        font-size: 24px;
     }
 
     .bottom-section .content-wrapper {
-        gap: 0; /* Remove gap if individual section padding is preferred */
+        gap: 0;
     }
 
     .section-one {
-        width: 350px; /* Restore original width */
-        padding: 0 40px; /* Restore original padding */
+        width: 350px;
+        padding: 0 40px;
     }
 
     .section-two {
-        width: 500px; /* Restore original width */
-        padding: 0 40px; /* Restore original padding */
+        width: 500px;
+        padding: 0 40px;
     }
 
     .section-three {
-        width: 350px; /* Restore original width */
-        padding: 0 40px; /* Restore original padding */
+        width: 350px;
+        padding: 0 40px;
     }
 }
